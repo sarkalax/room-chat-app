@@ -1,0 +1,52 @@
+@import "../variables.scss";
+
+.chat {
+    position: relative;
+    display: grid;
+    place-items: center;
+    gap: $gap;
+    height: 100%;
+    margin: 1rem;
+    width: 100%;
+
+    .roomNameH {
+        margin-bottom: 1rem;
+    }
+    .chatMessages {
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+
+        .chatMessage {
+            display: flex;
+            flex-direction: column;
+            gap: calc($gap*0.5);
+            padding: .3rem 0;
+
+            .chatUser {
+                display: flex;
+                gap: $gap;
+                justify-content: left;
+                align-items: center;
+            }
+            .messageText {
+                background: rgb(235, 235, 235);
+                padding: .8rem;
+                border-radius: $borderRadiusS;
+                margin-left: 2rem;
+            }
+        }
+    }
+    .newMessageForm {
+        display: flex;
+        width: 100%;
+        gap: $gap;
+        margin: 1rem auto;
+
+        button {
+            float: right;
+            margin: 0;
+        }
+
+    }
+}

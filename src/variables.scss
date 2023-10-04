@@ -1,0 +1,16 @@
+$boxShadowL: 10px 10px black;
+$boxShadowS: 5px 5px black;
+$border: 1.5px solid black;
+$borderRadiusL: 16px;
+$borderRadiusS: 8px;
+$gap: .8rem;
+$transition: .3s ease-in-out;
+
+$mob: 760px;
+$tab: 960px;
+
+@mixin responsive-device($breakpoint) {
+    @media screen and (max-width: $breakpoint) {
+        @content
+    }
+}

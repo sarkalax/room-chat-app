@@ -1,0 +1,14 @@
+.loading {
+    span {
+        display: inline-block;
+        animation: dots .6s ease-in-out infinite;
+        transform: translateY(0);
+
+        &:nth-of-type(2) {
+            animation-delay: .2s;
+        }
+        &:nth-of-type(3) {
+            animation-delay: .4s;
+        }
+    }
+}

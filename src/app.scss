@@ -1,0 +1,96 @@
+@import "./variables.scss";
+
+* {
+    padding: 0;margin: 0;box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    display: grid;
+    align-items: center;
+    height: 100vh;
+    background: rgb(175, 203, 245);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $gap;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: $gap;
+    padding: 2rem;
+    height: 80vh;
+    width: 100%;
+    max-width: 50vw;
+    background: white;
+    border: $border;
+    box-shadow: $boxShadowL;
+    border-radius: $borderRadiusL;
+}
+input {
+    line-height: 1.5rem;
+    border: none;
+    border-bottom: $border;
+    transition: $transition;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 1px black;
+    }
+}
+button {
+    margin: 0 ;
+    padding: 0.8rem 1.5rem;
+    background: transparent;
+    text-transform: capitalize;
+    background: white;
+    border: $border;
+    transition: $transition;
+    border-radius: $borderRadiusS;
+
+    &:hover {
+        box-shadow: $boxShadowS;
+    }
+}
+textarea {
+    flex: 1;
+    padding: .5rem;
+    font-size: 1rem;
+    resize: none;
+    border: $border;
+    border-radius: $borderRadiusS;
+    
+    &:focus {
+        outline: none;
+    }
+}
+.actionButtons {
+    display: flex;
+    gap: $gap;
+}
+
+
+@keyframes dots {
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+@include responsive-device($tab) {
+    .container {
+        max-width: 70vw;
+    }
+}
+@include responsive-device($mob) {
+    .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 1rem .5rem;
+    }
+}

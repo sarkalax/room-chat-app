@@ -1,0 +1,7 @@
+@import "../variables.scss";
+
+.auth {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
